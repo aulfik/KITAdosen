@@ -1,0 +1,32 @@
+# System Files
+.DS_Store
+*../DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Dependencies (if you decide to use npm/yarn later)
+node_modules/
+jspm_packages/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Optional: Ignore assets if they are heavy and hosted elsewhere (uncomment if needed)
+# /assets/*.mp4
+# /assets/*.zip
