@@ -417,7 +417,7 @@ def install_git_hook() -> bool:
 # Otomatis sinkronisasi Obsidian Kanban saat commit baru berhasil dibuat
 REPO_DIR="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
 if command -v python3 >/dev/null 2>&1; then
-    python3 "$REPO_DIR/scripts/sync_obsidian_kanban.py" >/dev/null 2>&1 &
+    python3 "$REPO_DIR/scripts/sync_obsidian_kanban.py"
 fi
 """
     try:
