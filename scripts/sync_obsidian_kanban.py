@@ -217,7 +217,8 @@ def update_kanban_file(vault_dir: Path, git_info: dict, stats: dict, dry_run: bo
                 elif line.startswith("## "):
                     current_section = None
                 elif line.strip().startswith("- [ ]") or line.strip().startswith("- [x]"):
-                    if "🅰️" not in line:
+                    # Abaikan kartu otomatis (berpenanda 🅰️ atau berupa entri git commit commit hash)
+                    if "🅰️" not in line and not re.search(r"-\s*\[[ x]\]\s*`[0-9a-f]{7,8}`", line):
                         if current_section == "backlog":
                             manual_backlog.append(line.strip())
                         elif current_section == "inprogress":
@@ -309,7 +310,7 @@ def update_kanban_file(vault_dir: Path, git_info: dict, stats: dict, dry_run: bo
     lines.append("")
     for c in git_info["commits"]:
         clean_subj = c["subject"].replace('"', "'")
-        lines.append(f"- [x] `{c['hash']}` {clean_subj} ✅ {c['date']}")
+        lines.append(f"- [x] `{c['hash']}` {clean_subj} ✅ {c['date']} 🅰️")
         lines.append("")
     for m in manual_done:
         lines.append(m)
