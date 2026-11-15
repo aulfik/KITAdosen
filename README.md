@@ -1,4 +1,4 @@
-# 🎓 KITAdosen — Portal Layanan Dosen Indonesia
+# 🎓 KITAdosen — Port Dosen Indonesia
 
 Portal dasbor agregator tautan cepat dan instrumen kinerja dosen di Indonesia. Membantu dosen mengakses seluruh ekosistem layanan akademik, administrasi kepegawaian Kemdiktisaintek, pangkalan data riset, dan publikasi dalam satu pintu.
 
